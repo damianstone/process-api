@@ -11,7 +11,7 @@ env:
 
 jobs:
   # use environements from github
-  environmemt: testing
+  environment: testing
   test:
     # these env variables are just for the test job
     env: 
