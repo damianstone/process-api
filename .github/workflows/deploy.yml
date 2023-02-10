@@ -10,9 +10,9 @@ env:
   MONGODB_DB_NAME: process-api-demo
 
 jobs:
-  # use environements from github
-  environment: testing
   test:
+    # use environements from github
+    environment: testing
     # these env variables are just for the test job
     env: 
       MONGODB_CLUSTER_ADDRESS: cluster0.kaifyj0.mongodb.net
