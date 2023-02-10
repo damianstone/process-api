@@ -7,7 +7,7 @@ on:
 
 # workflow env variables, so available in all the jobs      
 env: 
-  MONGODB_DB_NAME: gha-demo
+  MONGODB_DB_NAME: process-api-demo
 
 jobs:
   test:
