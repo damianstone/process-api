@@ -14,8 +14,8 @@ jobs:
     # these env variables are just for the test job
     env: 
       MONGODB_CLUSTER_ADDRESS: cluster0.kaifyj0.mongodb.net
-      MONGODB_USERNAME: process-api-user
-      MONGODB_PASSWORD: YjeQmoqgaWLqBLSI
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
