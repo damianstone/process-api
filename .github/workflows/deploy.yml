@@ -13,6 +13,10 @@ jobs:
   test:
     # use environements from github
     environment: testing
+    # adding image
+    container: 
+      image: node:16 # oficial image with node version 16
+      # env: # env for the image
     # these env variables are just for the test job
     env: 
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
