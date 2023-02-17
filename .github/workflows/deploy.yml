@@ -15,6 +15,7 @@ jobs:
     environment: testing
     # these env variables are just for the test job
     env: 
+      MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.kaifyj0.mongodb.net
       # using secrets from github
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
@@ -43,6 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output information
+        env:
+          PORT: 3000
         run: |        
-          echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
-          echo "MONGODB_DB_NAME ${{ env.MONGODB_DB_NAME }}"
+          echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
+          echo "MONGODB_USERNAME: $MONGODB_USERNAME"
+          echo "${{ env.PORT }}"
